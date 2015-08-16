@@ -98,15 +98,17 @@ public class SomeKindOfEntryDAO : AbstractDocumentDAO<SomeKindOfEntry>
 You can then use this DAO to perform your CRUD and sharing operations on this new document type:
 
 ```csharp
+SomeKindOfEntry doc = ...;
+
 var sessionId = auth.SessionId;
 
 using (var dao = new SomeKindOfEntryDAO(config)) {
   
-  var createResult = await dao.CreateAsync(object, sessionId); // creates a new document in BAASBox
-  var updateResult = await dao.UpdateAsync(object, sessionId); // updates the existing document in BAASBox
+  var createResult = await dao.CreateAsync(doc, sessionId); // creates a new document in BAASBox
+  var updateResult = await dao.UpdateAsync(doc, sessionId); // updates the existing document in BAASBox
   
   // determines what to do based on whether or not the object's id field is currently null
-  var submitResult = await dao.CreateOrUpdateAsync(object, sessionId); 
+  var submitResult = await dao.CreateOrUpdateAsync(doc, sessionId); 
   
   var getResult = await dao.GetAsync(id, sessionId); // retrieves an object by id
   var ListResults = await dao.ListAsync(sessionId); // retrieves all objects of this DAO's type
@@ -124,6 +126,6 @@ using (var dao = new SomeKindOfEntryDAO(config)) {
   
   // NB. to share/unshare with other roles, provide the role name as an additional optional parameter
   
-  var deleteResult = await dao.DeleteAsync(object); // deletes the given document
+  var deleteResult = await dao.DeleteAsync(doc); // deletes the given document
 }
 ```
