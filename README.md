@@ -129,3 +129,7 @@ using (var dao = new SomeKindOfEntryDAO(config)) {
   var deleteResult = await dao.DeleteAsync(doc); // deletes the given document
 }
 ```
+
+Once a document has been shared to a given role, all members of that role will be able to see it when they ListAsync that document type.
+
+eg. As mentioned, FollowAsync places a user in the default followers_of_**username** role. ShareAsync by default then shares the given document with followers_of_**username**. After this, all users in the followers_of_**username** role will be able to see the document.
