@@ -17,12 +17,12 @@ namespace BAASBox.Access.Business
 			auth.Clear();
 		}
 
-		public async Task<SignInData> SignIn(string username, string password)
+		public async Task<SignInData> SignInAsync(string username, string password)
 		{
 			BBResponse<SignInData> response = null;
 			try {
 				using (var authDAO = new AuthorisationDAO(config)) {
-					response = await authDAO.SignInGetTokenFluent (username, password);
+					response = await authDAO.SignInGetTokenAsync (username, password);
 				}
 			} catch {
 				// TODO: error... so... throw it?

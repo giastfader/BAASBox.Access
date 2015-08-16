@@ -13,12 +13,12 @@ namespace BAASBox.Access.Business
 		{
 		}
 
-		public async Task<bool> Follow(string username)
+		public async Task<bool> FollowAsync(string username)
 		{
 			var session = auth.SessionId;
 
 			using (var dao = new FeedDAO (config)) {
-				var result = await dao.Follow (username, session);
+				var result = await dao.FollowAsync (username, session);
 				var response = result.data;
 
 				if (result.result.ToLower () == "ok" &&
@@ -33,11 +33,11 @@ namespace BAASBox.Access.Business
 			}
 		}
 
-		public async Task<bool> Unfollow(string username)
+		public async Task<bool> UnfollowAsync(string username)
 		{
 			var session = auth.SessionId;
 			using (var dao = new FeedDAO (config)) {
-				var result = await dao.Unfollow (username, session);
+				var result = await dao.UnfollowAsync (username, session);
 				var response = result.data;
 
 				if (result.result.ToLower () == "ok") {
@@ -49,23 +49,23 @@ namespace BAASBox.Access.Business
 			}
 		}
 
-		public async Task<IEnumerable<string>> GetFollowing()
+		public async Task<IEnumerable<string>> GetFollowingAsync()
 		{
 			var session = auth.SessionId;
 			var user = auth.UserName;
 			using (var dao = new FeedDAO (config)) {
-				var result = await dao.GetFollowing (user, session);
+				var result = await dao.GetFollowingAsync (user, session);
 				var following = result.data;
 				return following.Select (f => f.user.name);
 			}
 		}
 
-		public async Task<IEnumerable<string>> GetFollowers()
+		public async Task<IEnumerable<string>> GetFollowersAsync()
 		{
 			var session = auth.SessionId;
 			var user = auth.UserName;
 			using (var dao = new FeedDAO (config)) {
-				var result = await dao.GetFollowers (user, session);
+				var result = await dao.GetFollowersAsync (user, session);
 				var followers = result.data;
 				return followers.Select (f => f.user.name);
 			}

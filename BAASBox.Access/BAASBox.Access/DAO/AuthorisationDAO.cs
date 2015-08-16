@@ -16,7 +16,7 @@ namespace BAASBox.Access.DAO
 		{
 		}
 
-		public async Task<BBResponse<SignInData>> SignInGetTokenFluent(string username, string password)
+		public async Task<BBResponse<SignInData>> SignInGetTokenAsync(string username, string password)
 		{
 			var data = new { username = username, password = password, appcode = config.AppCode };
 			var json = await config.EndpointLogin

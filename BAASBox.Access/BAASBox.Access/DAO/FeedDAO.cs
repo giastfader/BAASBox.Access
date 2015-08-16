@@ -11,7 +11,7 @@ namespace BAASBox.Access.DAO
 		{
 		}
 
-		public async Task<BBResponse<FollowResponseData>> Follow(string username, string sessionId)
+		public async Task<BBResponse<FollowResponseData>> FollowAsync(string username, string sessionId)
 		{
 			
 			var result = await config.EndpointFollow(username)
@@ -22,7 +22,7 @@ namespace BAASBox.Access.DAO
 			return result;
 		}
 
-		public async Task<BBResponse<string>> Unfollow(string username, string sessionId)
+		public async Task<BBResponse<string>> UnfollowAsync(string username, string sessionId)
 		{
 			var endpoint = config.EndpointFollow (username);
 			var result = await endpoint
@@ -33,7 +33,7 @@ namespace BAASBox.Access.DAO
 			return result;
 		}
 
-		public async Task<BBResponse<FollowerData[]>> GetFollowers(string username, string sessionId)
+		public async Task<BBResponse<FollowerData[]>> GetFollowersAsync(string username, string sessionId)
 		{
 			var result = await config.EndpointFollowers(username)
 				.WithHeader("X-BB-SESSION", sessionId)
@@ -43,7 +43,7 @@ namespace BAASBox.Access.DAO
 			return result;
 		}
 
-		public async Task<BBResponse<FollowerData[]>> GetFollowing(string username, string sessionId)
+		public async Task<BBResponse<FollowerData[]>> GetFollowingAsync(string username, string sessionId)
 		{
 			var result = await config.EndpointFollowing(username)
 				.WithHeader("X-BB-SESSION", sessionId)
