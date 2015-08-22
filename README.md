@@ -1,5 +1,6 @@
 # BAASBox.Access
-A PCL library for accessing various features of the BAASBox web service API.
+A PCL library for accessing various features of the BAASBox web service API, now available as a NuGet package:
+https://www.nuget.org/packages/BAASBox.Access/
 
 ## Notes
 These instructions presuppose that you have an instance of BAASBox already running.
