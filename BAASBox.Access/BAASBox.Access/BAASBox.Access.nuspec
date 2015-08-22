@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/instantiator/BAASBox.Access</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>Initial release: base functionality.</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>BAASBox PCL</tags>
   </metadata>

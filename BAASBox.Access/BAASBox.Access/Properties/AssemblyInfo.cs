@@ -6,10 +6,10 @@ using System.Runtime.CompilerServices;
 
 [assembly: AssemblyTitle ("BAASBox.Access")]
 [assembly: AssemblyDescription ("Simple C# access library for BAASBox")]
-[assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
+[assembly: AssemblyConfiguration ("PCL")]
+[assembly: AssemblyCompany ("Front-Line Tech Ltd")]
 [assembly: AssemblyProduct ("BAASBox.Access")]
-[assembly: AssemblyCopyright ("Lewis Westbury")]
+[assembly: AssemblyCopyright ("2015 Front-Line Tech Ltd")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
