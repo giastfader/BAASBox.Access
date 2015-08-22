@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle ("BAASBox.Access")]
-[assembly: AssemblyDescription ("")]
+[assembly: AssemblyDescription ("Simple C# access library for BAASBox")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Front-Line Tech Ltd")]
-[assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Front-Line Tech Ltd")]
+[assembly: AssemblyCompany ("")]
+[assembly: AssemblyProduct ("BAASBox.Access")]
+[assembly: AssemblyCopyright ("Lewis Westbury")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
