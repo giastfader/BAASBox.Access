@@ -2,6 +2,12 @@
 A PCL library for accessing various features of the BAASBox web service API, now available as a NuGet package:
 https://www.nuget.org/packages/BAASBox.Access/
 
+To use BAASBox with PCL Xamarin.Forms (the cross-platform C# library for app UI development), you'll also want BAASBox.CRUD.UI. Usage of this is demonstrated and documented in the sample app, also available on GitHub.
+
+* https://www.nuget.org/packages/BAASBox.CRUD.UI/
+* https://github.com/instantiator/BAASBox.CRUD.UI
+* https://github.com/instantiator/BAASBox.SampleApp
+
 ## Notes
 These instructions presuppose that you have an instance of BAASBox already running.
 
